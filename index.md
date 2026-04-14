@@ -6,5 +6,5 @@ layout: base.njk
 
 Take control of your money.
 
-[See Features](features/)
-[Get Started](signup/)
+<a href="{{ '/features/' | url }}">See Features</a>
+<a href="{{ '/signup/' | url }}">Get Started</a>

@@ -6,5 +6,5 @@ layout: base.njk
 
 Smart budgeting. Real-time insights. No hidden fees.
 
-[Start now](../signup/)
-[Back to home](../)
+<a href="{{ '/signup/' | url }}">Start now</a>
+<a href="{{ '/' | url }}">Back to home</a>
