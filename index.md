@@ -6,5 +6,5 @@ layout: base.njk
 
 Take control of your money.
 
-<a href="{{ '/features/' | url }}">See Features</a>
-<a href="{{ '/signup/' | url }}">Get Started</a>
+<a id="cta-features" href="{{ '/features/' | url }}">See Features</a>
+<a id="cta-primary" href="{{ '/signup/' | url }}">Get Started</a>

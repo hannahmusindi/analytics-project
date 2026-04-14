@@ -18,3 +18,29 @@
   {{ content | safe }}
 </body>
 </html>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+
+  function trackClick(id, eventName) {
+    const el = document.getElementById(id);
+    if (el) {
+      el.addEventListener("click", function() {
+        gtag('event', eventName);
+      });
+    }
+  }
+
+  trackClick("cta-primary", "click_get_started");
+  trackClick("cta-features", "click_see_features");
+  trackClick("cta-features-to-signup", "click_features_signup");
+
+  const form = document.getElementById("signup-form");
+  if (form) {
+    form.addEventListener("submit", function() {
+      gtag('event', 'signup_submit');
+    });
+  }
+
+});
+</script>
