@@ -1,8 +1,10 @@
 <!doctype html>
-<html>
+<html lang="en">
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>BetterBank</title>
+  <link rel="stylesheet" href="{{ '/styles.css' | url }}">
 
   <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
@@ -10,37 +12,38 @@
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    gtag('config', 'G-PXX2JQCXCB');
+    gtag('config', 'G-XXXXXXXXXX');
   </script>
-
 </head>
 <body>
-  {{ content | safe }}
-</body>
-</html>
+  <main class="container">
+    {{ content | safe }}
+  </main>
 
-<script>
-document.addEventListener("DOMContentLoaded", function() {
+  <script>
+  document.addEventListener("DOMContentLoaded", function() {
 
-  function trackClick(id, eventName) {
-    const el = document.getElementById(id);
-    if (el) {
-      el.addEventListener("click", function() {
-        gtag('event', eventName);
+    function trackClick(id, eventName) {
+      const el = document.getElementById(id);
+      if (el) {
+        el.addEventListener("click", function() {
+          gtag('event', eventName);
+        });
+      }
+    }
+
+    trackClick("cta-primary", "click_get_started");
+    trackClick("cta-features", "click_see_features");
+    trackClick("cta-features-to-signup", "click_features_signup");
+
+    const form = document.getElementById("signup-form");
+    if (form) {
+      form.addEventListener("submit", function() {
+        gtag('event', 'signup_submit');
       });
     }
-  }
 
-  trackClick("cta-primary", "click_get_started");
-  trackClick("cta-features", "click_see_features");
-  trackClick("cta-features-to-signup", "click_features_signup");
-
-  const form = document.getElementById("signup-form");
-  if (form) {
-    form.addEventListener("submit", function() {
-      gtag('event', 'signup_submit');
-    });
-  }
-
-});
-</script>
+  });
+  </script>
+</body>
+</html>
