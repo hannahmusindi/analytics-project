@@ -6,5 +6,5 @@ layout: base.njk
 
 Take control of your money.
 
-[See Features](/features/)
-[Get Started](/signup/)
+[See Features](features/)
+[Get Started](signup/)
