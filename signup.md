@@ -5,4 +5,4 @@
   <button type="submit">Sign up</button>
 </form>
 
-[Back to home](../)
+[Back to home](/)
