@@ -1,3 +1,7 @@
+---
+layout: base.njk
+---
+
 # Features
 
 Smart budgeting. Real-time insights. No hidden fees.

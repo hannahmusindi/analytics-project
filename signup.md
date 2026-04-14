@@ -1,3 +1,6 @@
+---
+layout: base.njk
+---
 # Join BetterBank
 
 <form>

@@ -1,3 +1,6 @@
+---
+layout: base.njk
+---
 # BetterBank
 
 Take control of your money.
